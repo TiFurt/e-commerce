@@ -33,6 +33,10 @@ namespace e_commerce.Migrations
                     b.Property<int>("Ammount")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<bool>("HasOffer")
                         .HasColumnType("boolean");
 
@@ -67,8 +71,9 @@ namespace e_commerce.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Ammount")
-                        .HasColumnType("integer");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<bool>("HasOffer")
                         .HasColumnType("boolean");
@@ -84,10 +89,6 @@ namespace e_commerce.Migrations
                         .HasColumnType("numeric");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
 

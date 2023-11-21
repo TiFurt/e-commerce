@@ -6,6 +6,7 @@
         public string Title { get; set; }
         public decimal Price { get; set; }
         public decimal? SalePrice { get; set; }
+        public string Description { get; set; }
         public bool HasOffer { get; set; }
         public string Type { get; set; }
         public int Ammount { get; set; }
