@@ -1,4 +1,5 @@
 ﻿using e_commerce.Context;
+using e_commerce.Dtos;
 using e_commerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +20,14 @@ public class ProductController : ControllerBase
     }
     
     [HttpGet]
-    public async Task<ActionResult<List<Product>>> Get()
+    public async Task<ActionResult<List<Product>>> Get([FromQuery] ProductFilters? filters)
     {
-        return await _products.ToListAsync();
+        if (filters == null || string.IsNullOrEmpty(filters.Type))
+        {
+            return Ok(await _products.ToListAsync());
+        }
+        
+        return Ok(await _products.Where(p => string.Equals(p.Type, filters.Type, StringComparison.CurrentCultureIgnoreCase)).ToListAsync());
     }
     
     [HttpGet("{id:int}")]

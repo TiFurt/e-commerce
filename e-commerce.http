@@ -18,6 +18,7 @@ Content-Type: application/json
     "price": 55.22,
     "salePrice": 50.90,
     "hasOffer": true,
+    "description": "Livro mágico para crianças",
     "type": "Book",
     "ammount": 10,
     "imageLink": "https://m.media-amazon.com/images/I/71w0TqAVROL._SY466_.jpg"
@@ -33,6 +34,7 @@ Content-Type: application/json
     "price": 30.22,
     "salePrice": 25.90,
     "hasOffer": true,
+    "description": "Livro mágico para crianças",
     "type": "Book",
     "ammount": 10,
     "imageLink": "https://m.media-amazon.com/images/I/71w0TqAVROL._SY466_.jpg"
@@ -63,6 +65,7 @@ Content-Type: application/json
   "price": 10.50,
   "salePrice": 9.99,
   "hasOffer": true,
+  "description": "Entrega de produtos",
   "type": "delivery",
   "ammount": 10,
   "imageLink": "https://static.vecteezy.com/system/resources/previews/001/977/354/non_2x/smartphone-with-delivery-worker-using-face-mask-in-motorcycle-free-vector.jpg"
@@ -78,6 +81,7 @@ Content-Type: application/json
   "price": 40.33,
   "salePrice": 30.99,
   "hasOffer": true,
+  "description": "Entrega de produtos",
   "type": "delivery",
   "ammount": 10,
   "imageLink": "https://static.vecteezy.com/system/resources/previews/001/977/354/non_2x/smartphone-with-delivery-worker-using-face-mask-in-motorcycle-free-vector.jpg"
