@@ -1,0 +1,91 @@
+@e_commerce_HostAddress = https://localhost:44364
+
+GET {{e_commerce_HostAddress}}/api/Product/
+Accept: application/json
+
+###
+
+GET {{e_commerce_HostAddress}}/api/Product/1
+Accept: application/json
+
+###
+
+POST {{e_commerce_HostAddress}}/api/Product/
+Content-Type: application/json
+
+{
+    "title": "Livro Mágico",
+    "price": 55.22,
+    "salePrice": 50.90,
+    "hasOffer": true,
+    "type": "Book",
+    "ammount": 10,
+    "imageLink": "https://m.media-amazon.com/images/I/71w0TqAVROL._SY466_.jpg"
+}
+
+###
+
+PUT {{e_commerce_HostAddress}}/api/Product/1
+Content-Type: application/json
+
+{
+    "title": "Livro Mágico",
+    "price": 30.22,
+    "salePrice": 25.90,
+    "hasOffer": true,
+    "type": "Book",
+    "ammount": 10,
+    "imageLink": "https://m.media-amazon.com/images/I/71w0TqAVROL._SY466_.jpg"
+}
+
+###
+
+DELETE {{e_commerce_HostAddress}}/api/Product/1
+Accept: application/json
+
+###
+
+GET {{e_commerce_HostAddress}}/api/Service/
+Accept: application/json
+
+###
+
+GET {{e_commerce_HostAddress}}/api/Service/1
+Accept: application/json
+
+###
+
+POST {{e_commerce_HostAddress}}/api/Service/
+Content-Type: application/json
+
+{
+  "title": "Entrega",
+  "price": 10.50,
+  "salePrice": 9.99,
+  "hasOffer": true,
+  "type": "delivery",
+  "ammount": 10,
+  "imageLink": "https://static.vecteezy.com/system/resources/previews/001/977/354/non_2x/smartphone-with-delivery-worker-using-face-mask-in-motorcycle-free-vector.jpg"
+}
+
+###
+
+PUT {{e_commerce_HostAddress}}/api/Service/1
+Content-Type: application/json
+
+{
+  "title": "Livro Mágico",
+  "price": 40.33,
+  "salePrice": 30.99,
+  "hasOffer": true,
+  "type": "delivery",
+  "ammount": 10,
+  "imageLink": "https://static.vecteezy.com/system/resources/previews/001/977/354/non_2x/smartphone-with-delivery-worker-using-face-mask-in-motorcycle-free-vector.jpg"
+}
+
+###
+
+DELETE {{e_commerce_HostAddress}}/api/Service/1
+Accept: application/json
+
+###
