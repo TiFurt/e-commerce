@@ -27,7 +27,7 @@ public class ProductController : ControllerBase
             return Ok(await _products.ToListAsync());
         }
         
-        return Ok(await _products.Where(p => string.Equals(p.Type, filters.Type, StringComparison.CurrentCultureIgnoreCase)).ToListAsync());
+        return Ok(await _products.Where(p => p.Type.ToLower().Equals(filters.Type.ToLower())).ToListAsync());
     }
     
     [HttpGet("{id:int}")]
